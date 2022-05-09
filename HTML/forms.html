@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h2>Formulaire de recherche</h2>
+  <form action="https://www.google.com/search" method="get">
+    <input type="search" name="q">
+    <button>Go</button>
+  </form>
+
+  <h2>Formulaire d'inscription (création)</h2>
+  <form action="/ma-page-qui-n-existe-pas" method="post">
+    <div>
+      Username: <input type="text" name="username">
+    </div>
+    <div>
+      Description: <textarea name="description"></textarea>
+    </div>
+    <div>
+      Choix: <select name="choix">
+        <option>Oui</option>
+        <option>Non</option>
+        <option>Peut-être</option>
+      </select>
+    </div>
+    <div>
+      Département: <select name="departement">
+        <option value="33">Gironde</option>
+        <option value="75">Paris</option>
+      </select>
+    </div>
+    <div>
+      Email: <input type="email">
+    </div>
+    <div>
+      <input type="number">
+    </div>
+    <div>
+      Date de naissance : <input type="date">
+    </div>
+    <div>
+      <label> Couleur : <input type="color"></label>
+    </div>
+    <div>
+      Choix :
+      <label><input type="radio" name="choix2" value="Oui"> Oui</label>
+      <label><input type="radio" name="choix2" value="Non"> Non</label>
+      <label><input type="radio" name="choix2" value="Peut-être"> Peut-être</label>
+    </div>
+    <div>
+      Loisirs :
+      <input type="checkbox" name="loisirs" value="Sport" id="loisirs-sport"> <label for="loisirs-sport">Sport</label>
+      <input type="checkbox" name="loisirs" value="Musique" id="loisirs-musique"> <label for="loisirs-musique">Musique</label>
+      <input type="checkbox" name="loisirs" value="Cinéma" id="loisirs-cinema"> <label for="loisirs-cinema">Cinéma</label>
+    </div>
+    <button>Subscribe</button>
+  </form>
+
+  <h2>Formulaire de mise à jour</h2>
+  <form action="/ma-page-qui-n-existe-pas" method="post">
+    <div>
+      Username: <input type="text" name="username" value="romain">
+    </div>
+    <div>
+      Description: <textarea name="description">C'est moi</textarea>
+    </div>
+    <div>
+      Choix: <select name="choix">
+        <option>Oui</option>
+        <option selected>Non</option>
+        <option>Peut-être</option>
+      </select>
+    </div>
+    <div>
+      Département: <select name="departement">
+        <option value="33">Gironde</option>
+        <option value="75">Paris</option>
+      </select>
+    </div>
+    <div>
+      Email: <input type="email">
+    </div>
+    <div>
+      <input type="number">
+    </div>
+    <div>
+      Date de naissance : <input type="date">
+    </div>
+    <div>
+      <label> Couleur : <input type="color"></label>
+    </div>
+    <div>
+      Choix :
+      <label><input type="radio" name="choix2" value="Oui"> Oui</label>
+      <label><input type="radio" name="choix2" value="Non" checked> Non</label>
+      <label><input type="radio" name="choix2" value="Peut-être"> Peut-être</label>
+    </div>
+    <div>
+      Loisirs :
+      <input type="checkbox" name="loisirs" value="Sport" id="loisirs-sport"> <label for="loisirs-sport">Sport</label>
+      <input type="checkbox" name="loisirs" value="Musique" id="loisirs-musique" checked> <label for="loisirs-musique">Musique</label>
+      <input type="checkbox" name="loisirs" value="Cinéma" id="loisirs-cinema" checked> <label for="loisirs-cinema">Cinéma</label>
+    </div>
+  </form>
+
+  <h2>Formulaire de login</h2>
+  <form action="/ma-page-qui-n-existe-pas" method="post">
+    <div>
+      <input type="text" name="login" placeholder="Votre login">
+    </div>
+    <div>
+      <input type="password" name="password" placeholder="Votre mot de passe">
+    </div>
+    <button>Go</button>
+  </form>
+
+  <h2>Formulaire avec fichiers</h2>
+  <form action="/ma-page-qui-n-existe-pas" method="post" enctype="multipart/form-data">
+    <input type="file">
+  </form>
+
+</body>
+</html>
