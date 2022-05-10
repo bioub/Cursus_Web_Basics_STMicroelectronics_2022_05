@@ -16,7 +16,7 @@
   <h2>Formulaire d'inscription (création)</h2>
   <form action="/ma-page-qui-n-existe-pas" method="post">
     <div>
-      Username: <input type="text" name="username">
+      Username: <input type="text" name="username" required pattern="[a-z]{2,8}">
     </div>
     <div>
       Description: <textarea name="description"></textarea>
