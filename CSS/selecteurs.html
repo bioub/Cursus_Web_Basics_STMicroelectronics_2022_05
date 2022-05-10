@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+/*
+    * {
+      border: 1px solid black;
+      padding: 4px;
+    }
+     */
+
+    /* p {
+      border: 1px solid black;
+      padding: 4px;
+    } */
+
+    /* *.title {
+      border: 1px solid black;
+      padding: 4px;
+    } */
+
+    /* h2.title {
+      border: 1px solid black;
+      padding: 4px;
+    } */
+
+    /* ET Logique (sans espace) */
+    /* h2.title.last {
+      border: 1px solid black;
+      padding: 4px;
+    } */
+
+    /* #second {
+      border: 1px solid black;
+      padding: 4px;
+    } */
+
+    /* #first, #second {
+      border: 1px solid black;
+      padding: 4px;
+    } */
+
+    /* OU Logique */
+    /* div, p {
+      border: 1px solid black;
+      padding: 4px;
+    } */
+
+    /* #first b {
+      border: 1px solid black;
+      padding: 4px;
+    } */
+
+    /* #first > p {
+      border: 1px solid black;
+      padding: 4px;
+    } */
+
+    /* h2 + p {
+      border: 1px solid black;
+      padding: 4px;
+    } */
+
+    /* h2 ~ p {
+      border: 1px solid black;
+      padding: 4px;
+    } */
+
+    /* p:nth-child(2) {
+      border: 1px solid black;
+      padding: 4px;
+    } */
+
+    /* p:nth-of-type(2) {
+      border: 1px solid black;
+      padding: 4px;
+    } */
+
+    /* [required] {
+      border: 1px solid black;
+      padding: 4px;
+    } */
+
+    /* [id$="e"] {
+      border: 1px solid black;
+      padding: 4px;
+    } */
+
+    a[rel~="external"] {
+      border: 1px solid black;
+      padding: 4px;
+    }
+
+    .last { /* [class~="last"] */
+
+    }
+
+    /* :required {
+
+    }
+
+    :valid {
+
+    }
+
+    :invalid {
+
+    } */
+
+    :not(:nth-child(2)) {
+
+    }
+
+    /* p::first-letter {
+      font-size: 4em;
+    } */
+
+    p::before {
+      content: '- ';
+    }
+  </style>
+</head>
+<body>
+  <div id="first">
+    <h2 class="title" id="title-1">Titre 1</h2>
+    <p>
+      <input required>
+      Lorem ipsum dolor sit amet <b>consectetur adipisicing</b> elit. Vel magni aut ducimus recusandae voluptatum labore id ratione consequatur sapiente laborum, perferendis quaerat saepe deserunt illo illum quo commodi eos unde!</p>
+    <p>Harum necessitatibus sunt veniam neque beatae quasi perspiciatis repudiandae exercitationem molestias unde eaque eius cupiditate nisi sequi, commodi at incidunt? Minima a accusantium soluta eligendi quibusdam iste ipsum excepturi rem.</p>
+  </div>
+  <div id="second">
+    <h2 class="title" id="title-2">Titre 2</h2>
+    <p>Lorem ipsum, dolor sit amet <b>consectetur adipisicing</b> elit. Quasi voluptate culpa officia modi eligendi est. Repellat explicabo quas vero illo, hic culpa harum mollitia aut dolor obcaecati alias laboriosam voluptate?</p>
+    <p>Maiores ratione rerum rem <a href="#" rel="external link">pariatur in a officiis</a>. Molestiae eveniet iure ex provident exercitationem, aspernatur in sapiente maiores qui eos fugit quae impedit minima rerum ipsam! Iste enim incidunt doloremque?</p>
+  </div>
+  <div id="third">
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis expedita maxime ducimus iure commodi mollitia, error eligendi deserunt dolorum esse enim animi ea ipsam quisquam culpa labore architecto, quas possimus.</p>
+    <h2 class="title last" id="title-3">Titre 3</h2>
+    <p>Lorem ipsum dolor sit amet, <b>consectetur adipisicing</b> elit. Porro cum eum voluptates nesciunt consectetur harum, temporibus necessitatibus rem optio dolor sed, illum assumenda magni? Mollitia maiores neque velit laboriosam! Aut?</p>
+    <p>Possimus, minus architecto nemo assumenda quam enim delectus aliquam. Quod atque illo dolore aliquid iste doloremque sunt tenetur unde veritatis! Voluptas minus provident quisquam, iste voluptates nam sit est dolores.</p>
+  </div>
+</body>
+</html>

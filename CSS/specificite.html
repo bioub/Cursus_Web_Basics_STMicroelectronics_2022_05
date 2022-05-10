@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .last.title { /* 0 - 2 - 0 */
+      background-color: lightyellow;
+    }
+
+    .title { /* 0 - 1 - 0 */
+      background-color: lightblue;
+    }
+
+    #second #title-2 { /* 2 - 0 - 0 */
+      background-color: lightgrey;
+    }
+
+    #title-1 { /* 1 - 0 - 0 */
+      background-color: lightgreen;
+    }
+
+    #second h2 { /* 1 - 0 - 1 */
+      background-color: lightsalmon;
+    }
+
+    h2 { /* 0 - 0 - 1 */
+      background-color: lightpink;
+    }
+
+    [style] {
+      background-color: violet !important;
+    }
+
+  </style>
+</head>
+<body>
+  <div id="first">
+    <h2 class="title" id="title-1">Titre 1</h2>
+    <p>
+      <input required>
+      Lorem ipsum dolor sit amet <b>consectetur adipisicing</b> elit. Vel magni aut ducimus recusandae voluptatum labore id ratione consequatur sapiente laborum, perferendis quaerat saepe deserunt illo illum quo commodi eos unde!</p>
+    <p>Harum necessitatibus sunt veniam neque beatae quasi perspiciatis repudiandae exercitationem molestias unde eaque eius cupiditate nisi sequi, commodi at incidunt? Minima a accusantium soluta eligendi quibusdam iste ipsum excepturi rem.</p>
+  </div>
+  <div id="second">
+    <h2 class="title" id="title-2" style="background-color: red;">Titre 2</h2>
+    <p>Lorem ipsum, dolor sit amet <b>consectetur adipisicing</b> elit. Quasi voluptate culpa officia modi eligendi est. Repellat explicabo quas vero illo, hic culpa harum mollitia aut dolor obcaecati alias laboriosam voluptate?</p>
+    <p>Maiores ratione rerum rem <a href="#" rel="external link">pariatur in a officiis</a>. Molestiae eveniet iure ex provident exercitationem, aspernatur in sapiente maiores qui eos fugit quae impedit minima rerum ipsam! Iste enim incidunt doloremque?</p>
+  </div>
+  <div id="third">
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis expedita maxime ducimus iure commodi mollitia, error eligendi deserunt dolorum esse enim animi ea ipsam quisquam culpa labore architecto, quas possimus.</p>
+    <h2 class="title last" id="title-3">Titre 3</h2>
+    <p>Lorem ipsum dolor sit amet, <b>consectetur adipisicing</b> elit. Porro cum eum voluptates nesciunt consectetur harum, temporibus necessitatibus rem optio dolor sed, illum assumenda magni? Mollitia maiores neque velit laboriosam! Aut?</p>
+    <p>Possimus, minus architecto nemo assumenda quam enim delectus aliquam. Quod atque illo dolore aliquid iste doloremque sunt tenetur unde veritatis! Voluptas minus provident quisquam, iste voluptates nam sit est dolores.</p>
+  </div>
+</body>
+</html>
