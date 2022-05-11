@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .container {
+        display: grid;
+        grid-template-rows: 100px 200px;
+        grid-template-columns: 200px 1fr;
+        grid-template-areas: "y y"
+                             "r g";
+      }
+
+      .yellow {
+        background-color: lightyellow;
+        grid-area: y;
+      }
+
+      .red {
+        background-color: lightcoral;
+        grid-area: r;
+      }
+
+      .green {
+        background-color: lightgreen;
+        grid-area: g;
+      }
+
+      .blue {
+        background-color: lightblue;
+      }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="col yellow"></div>
+    <div class="col red"></div>
+    <div class="col green"></div>
+    <div class="col blue"></div>
+  </div>
+</body>
+</html>

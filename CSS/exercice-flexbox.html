@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      /* text properties */
+    }
+
+    .container {
+      border: 1px solid black;
+      width: 800px;
+      margin: 0 auto;
+    }
+
+    header {
+      position: relative;
+      background-color: lightblue;
+      height: 100px;
+      padding: 5px;
+    }
+
+    header h1 {
+      margin-top: 0;
+    }
+
+    header .menu-login {
+      padding: 5px;
+      background-color: lightgreen;
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+
+    .middle {
+      display: flex;
+    }
+
+    .menu-left {
+      width: 30%;
+      background-color: yellow;
+    }
+
+    .menu-left a {
+      background-color: coral;
+      display: block;
+      height: 50px;
+      margin: 1em 0;
+    }
+
+    main {
+      width: 70%;
+      padding: 10px;
+    }
+
+    .gallery {
+      margin: 1em 0;
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .gallery > .img {
+      width: 30%;
+      height: 100px;
+      background-color: coral;
+    }
+
+    .gallery > .img {
+      margin-left: 10px;
+      margin-bottom: 10px;
+    }
+
+    .gallery > .img:nth-child(3n + 1) {
+      margin-left: 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Mon titre</h1>
+      <nav class="menu-login">
+        Login
+      </nav>
+    </header>
+    <div class="middle">
+      <nav class="menu-left">
+        <a href="#">Lien 1</a>
+        <a href="#">Lien 2</a>
+        <a href="#">Lien 3</a>
+      </nav>
+      <main>
+        <nav class="menu-breadcrumb">
+          <a href="#">Home</a> >
+          <a href="#">Catégorie</a> >
+          <a href="#">Produit</a>
+        </nav>
+        <div class="gallery">
+          <div class="img">img</div>
+          <div class="img">img</div>
+          <div class="img">img</div>
+          <div class="img">img</div>
+          <div class="img">img</div>
+        </div>
+      </main>
+    </div>
+  </div>
+</body>
+</html>
