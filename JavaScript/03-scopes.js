@@ -27,3 +27,11 @@ externe()
 
 console.log(typeof maVar); // undefined
 console.log(typeof interne); // undefined
+
+// pile d'appels
+// ^
+// |
+// |
+// |interne
+// |externe
+// +-----------------------------> temps
