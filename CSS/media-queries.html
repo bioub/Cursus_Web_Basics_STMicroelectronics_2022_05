@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!-- <link rel="stylesheet" href="app.css" media="screen">
+  <link rel="stylesheet" href="print.css" media="print"> -->
+  <style>
+    div {
+      width: 100px;
+      height: 100px;
+      background-color: beige;
+      display: none;
+    }
+
+    @media screen {
+      .screen {
+        display: block;
+      }
+    }
+
+    @media print {
+      .print {
+        display: block;
+      }
+    }
+
+    @media (orientation: portrait) {
+      .portrait {
+        display: block;
+      }
+    }
+
+    @media (orientation: landscape) {
+      .landscape {
+        display: block;
+      }
+    }
+
+    @media (width: 800px) {
+      .heighthundred {
+        display: block;
+      }
+    }
+
+    @media (min-width: 800px) {
+      .atleastheighthundred {
+        display: block;
+      }
+    }
+
+    @media (max-width: 800px) {
+      .atmostheighthundred {
+        display: block;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="portrait">portrait</div>
+  <div class="landscape">landscape</div>
+
+  <div class="screen">screen</div>
+  <div class="print">print</div>
+
+  <div class="heighthundred">800px</div>
+
+  <div class="atleastheighthundred">&gt; 800px</div>
+  <div class="atmostheighthundred">&lt; 800px</div>
+</body>
+</html>
