@@ -25,6 +25,18 @@
                            "menu main";
     }
 
+    @media (max-width: 800px) {
+      .container {
+        border: 0;
+        width: 100%;
+        grid-template-rows: 100px auto auto;
+        grid-template-columns: 1fr;
+        grid-template-areas: "header"
+                             "main"
+                             "menu";
+      }
+    }
+
     header {
       position: relative;
       background-color: lightblue;
@@ -76,6 +88,12 @@
       gap: 10px;
     }
 
+    @media (max-width: 600px) {
+      .gallery {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
     .gallery > .img {
       background-color: coral;
       transition-property: background-color transform;
@@ -87,6 +105,8 @@
       background-color: yellow;
       transform: scale(1.2);
     }
+
+
 
   </style>
 </head>
