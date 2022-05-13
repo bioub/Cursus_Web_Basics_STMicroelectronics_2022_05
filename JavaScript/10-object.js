@@ -99,11 +99,16 @@ function Contact(name) {
   // }
 }
 
+Contact.getClass = function() {
+  return 'Contact';
+}
+
 Contact.prototype.hello = function( ) {
   return 'Hello ' + this.name;
 };
 
 const romain = new Contact('Romain');
+console.log('Contact.getClass()', Contact.getClass());
 console.log('romain.hello()', romain.hello());
 // delete romain.name;
 console.log('typeof Contact', typeof Contact); // function

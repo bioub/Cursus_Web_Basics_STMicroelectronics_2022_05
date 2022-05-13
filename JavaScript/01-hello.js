@@ -4,8 +4,15 @@ const names = ['Romain', 'Eric', 'Jean'];
  * @param {string} name
  */
 function hello(name) {
-  return 'Hello ' + name;
+//return 'Hello ' + name + ' !';
+  return `Hello ${name} !`;
 }
+
+// const html = `
+// <p>
+//  lorem
+// </p>
+// `;
 
 // const hello = function (name) {
 //   return 'Hello ' + name;
