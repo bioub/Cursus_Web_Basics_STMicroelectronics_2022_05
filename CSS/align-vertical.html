@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box {
+        height: 200px;
+        border: 1px solid black;
+        margin: 1em 0;
+      }
+
+      .block {
+        width: 100px;
+        height: 100px;
+        background-color: yellow;
+      }
+
+      .oneline {
+        line-height: 200px;
+      }
+
+      .flex-container {
+        display: flex;
+        /*
+        align-items: center;
+        justify-content: center;
+        */
+      }
+
+      .block {
+        /* align-self: center;
+        justify-self: center; */
+        /* margin-left: auto;
+        margin-right: auto;
+        margin-top: auto;
+        margin-bottom: auto; */
+        margin: auto;
+      }
+
+      input {
+        margin: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box oneline">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus,
+      accusamus dolore cupiditate id sint officiis tempore perspiciatis
+      voluptatibus beatae exercitationem nostrum animi quas velit saepe earum
+      dolorem quisquam voluptas! Magnam!
+    </div>
+    <div class="box flex-container">
+      <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta reiciendis id porro. Velit natus ea est error voluptatibus nulla quibusdam, illo nobis? Magnam ex nesciunt delectus repellendus voluptatibus, ipsum suscipit.</div>
+    </div>
+    <div class="box flex-container">
+      <div class="block"></div>
+    </div>
+    <div class="box flex-container">
+      <input>
+    </div>
+  </body>
+</html>
