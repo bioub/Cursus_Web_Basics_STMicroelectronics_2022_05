@@ -20,9 +20,17 @@ function getRandomIntInclusive(min, max) {
 
 const readline = require('readline');
 
+// const rl = readline.createInterface({
+//   input: process.stdin,
+//   output: process.stdout,
+// });
+
+// const rl = readline.createInterface(process.stdin, process.stdout, undefined, undefined, undefined, undefined, undefined, undefined, undefined, true);
+
 const rl = readline.createInterface({
   input: process.stdin,
   output: process.stdout,
+  // escapeCodeTimeout: 1000,
 });
 
 function jouer() {
