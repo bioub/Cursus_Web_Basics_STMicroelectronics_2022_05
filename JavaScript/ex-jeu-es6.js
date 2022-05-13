@@ -1,22 +1,18 @@
 'use strict';
 
 const Random = {
-  // 1 - method properties
-  get: function () {
+  get() {
     return Math.random();
   },
-  // 1 - method properties
-  getArbitrary: function (min, max) {
+  getArbitrary(min, max) {
     return Math.random() * (max - min) + min;
   },
-  // 1 - method properties
-  getInt: function (min, max) {
+  getInt(min, max) {
     min = Math.ceil(min);
     max = Math.floor(max);
-    return Math.floor(Math.random() * (max - min) + min); //The maximum is exclusive and the minimum is inclusive
+    return Math.floor(Math.random() * (max - min) + min); // The maximum is exclusive and the minimum is inclusive
   },
-  // 1 - method properties
-  getIntInclusive: function (min, max) {
+  getIntInclusive(min, max) {
     min = Math.ceil(min);
     max = Math.floor(max);
     return Math.floor(Math.random() * (max - min + 1) + min); //The maximum is inclusive and the minimum is inclusive
@@ -25,50 +21,56 @@ const Random = {
 
 const readline = require('readline');
 
-// 2 - class
-function Jeu(options /* 3 - default param */) {
-  options = options || {};
-  // 6 - object destructuring + shorthand property + default value */
-  const min = options.min || 0;
-  const max = options.max !== undefined ? options.max : 100;
-  this.entierAlea = Random.getInt(min, max);
-  this.essais = [];
-  this.rl = readline.createInterface({
-    input: process.stdin,
-    output: process.stdout,
-  });
-}
+class Jeu {
+  constructor(options = {}) {
+    // 6 - object destructuring + shorthand property + default value */
+    // const min = options.min || 0;
+    // const max = options.max !== undefined ? options.max : 100;
 
-Jeu.prototype.jouer = function() {
-  if (this.essais.length) {
-    // 4 - template literal
-    console.log('Vous avez déjà joué : ' + this.essais.join(' - '));
+    const { min = 0, max = 100 } = options;
+
+    // Object.assign(this, { min: 0, max: 100 }, options);
+
+    // ES2020 (nullish coalescing operator ??) (optional chaining ?)
+    // this.min = options?.min ?? 0;
+    // this.max = options?.max ?? 100;
+
+    this.entierAlea = Random.getInt(min, max);
+    this.essais = [];
+    this.rl = readline.createInterface({
+      input: process.stdin,
+      output: process.stdout,
+    });
   }
-
-  this.rl.question('Quel est le nombre ? ', (answer) => {
-    // 5 - API Number
-    const entierSaisi = parseInt(answer, 10);
-
-    // 5 - API Number
-    if (isNaN(entierSaisi)) {
-      console.log('Erreur : il faut saisir un entier');
-      return this.jouer();
+  jouer() {
+    if (this.essais.length) {
+      console.log(`Vous avez déjà joué : ${this.essais.join(' - ')}`);
     }
 
-    this.essais.push(entierSaisi);
+    this.rl.question('Quel est le nombre ? ', (answer) => {
+      const entierSaisi = Number.parseInt(answer, 10);
 
-    if (entierSaisi < this.entierAlea) {
-      console.log('Trop petit');
-      this.jouer();
-    } else if (entierSaisi > this.entierAlea) {
-      console.log('Trop grand');
-      this.jouer();
-    } else {
-      console.log('Gagné');
-      this.rl.close();
-    }
-  });
+      if (Number.isNaN(entierSaisi)) {
+        console.log('Erreur : il faut saisir un entier');
+        return this.jouer();
+      }
+
+      this.essais.push(entierSaisi);
+
+      if (entierSaisi < this.entierAlea) {
+        console.log('Trop petit');
+        this.jouer();
+      } else if (entierSaisi > this.entierAlea) {
+        console.log('Trop grand');
+        this.jouer();
+      } else {
+        console.log('Gagné');
+        this.rl.close();
+      }
+    });
+  }
 }
+
 
 const game = new Jeu();
 game.jouer();
