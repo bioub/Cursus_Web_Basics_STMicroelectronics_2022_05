@@ -14,12 +14,12 @@ console.log('E');
 // ^
 // |
 // |
-// |                           lg      lg    lg         lg
-// |st - st - st - st - lg ... cbB ... cbA - cbD ...    cbC
-// 0---------------------------2ms------------------------> temps
-//                      E      B       A     D
+// |                           lg              lg    lg         lg
+// |st - st - st - st - lg ... cbB ...         cbA - cbD ...    cbC
+// 0---------------------------2ms---------------------------------------------> temps
+//                      E      B               A     D
 
-// File d'attente (task)
+// File d'attente de timers (task)
 // 0ms : cbB
 // 2ms :
 // 499ms : cbA cbD
