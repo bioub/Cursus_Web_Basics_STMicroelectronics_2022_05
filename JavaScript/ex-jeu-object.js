@@ -1,3 +1,5 @@
+'use strict';
+
 // Priviléger 4 fonction à un objet qui regroupe des méthodes
 // (mieux pour le Tree Shaking)
 const Random = {
