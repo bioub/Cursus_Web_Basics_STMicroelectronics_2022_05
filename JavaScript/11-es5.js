@@ -7,9 +7,9 @@ const coords = {
 
 Object.defineProperty(coords, 'visible', {
   value: true,
-  writable: false,
-  configurable: false,
-  enumerable: false,
+  // writable: false,
+  // configurable: false,
+  // enumerable: false,
 });
 
 console.log(coords.visible); // true

@@ -15,10 +15,10 @@
 // vers
 // un tableau (ex: [4, 5])
 
-function sum(a, b, ...args) {
+function sum(a, b, ...nbs) {
   let result = a + b;
 
-  for (const arg of args) {
+  for (const arg of nbs) {
     result += arg;
   }
 
@@ -73,7 +73,7 @@ const coords = {x: 1, y: 2};
 //    {x: 1   , y: 2   }
 const {x: valX, y: valY} = coords;
 
-// combiné avec shortand property
+// combiné avec shorthand property
 // combiné avec default
 const { x = 0, y = 0 } = coords;
 
