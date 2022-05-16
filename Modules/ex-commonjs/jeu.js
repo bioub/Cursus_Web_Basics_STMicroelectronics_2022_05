@@ -1,7 +1,7 @@
 'use strict';
 
-// importer Random
 const readline = require('readline');
+const { Random } = require('./random');
 
 class Jeu {
   constructor(options = {}) {
@@ -54,3 +54,4 @@ class Jeu {
 }
 
 // exporter Jeu
+module.exports = Jeu; // le retour de require sera Jeu directement

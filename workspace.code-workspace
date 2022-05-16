@@ -10,10 +10,10 @@
 			"path": "JavaScript"
 		},
 		{
-			"path": "JavaScript-Modules"
+			"path": "Modules"
 		}
 	],
 	"settings": {
-		"liveServer.settings.multiRootWorkspaceName": "JavaScript"
+		"liveServer.settings.multiRootWorkspaceName": "Modules"
 	}
 }

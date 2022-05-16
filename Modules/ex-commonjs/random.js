@@ -19,4 +19,4 @@ const Random = {
   },
 };
 
-// exporter Random
+exports.Random = Random;
