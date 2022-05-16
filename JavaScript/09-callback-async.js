@@ -30,3 +30,16 @@ console.log('E');
 
 // Jake Archibald : In the loop
 // https://www.youtube.com/watch?v=cCOL7MC4Pl0
+
+
+
+// const { EventEmitter } = require('events');
+
+// const events = new EventEmitter();
+
+// events.on('my-event', () => {
+//   console.log('inside callback');
+// })
+
+// events.emit('my-event');
+// console.log('after emit');
