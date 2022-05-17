@@ -68,7 +68,8 @@ function returnArgCountLowerThan10() {
 console.log(returnArgCountLowerThan10(1, 20, 5, 8, 35));
 
 // for (const key in object) {
-//   if (Object.hasOwnProperty.call(object, key)) {
+  // object.hasOwnProperty(key)
+//   if (Object.prototype.hasOwnProperty.call(object, key)) {
 //     const element = object[key];
 //   }
 // }

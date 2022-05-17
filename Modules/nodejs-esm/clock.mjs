@@ -4,6 +4,7 @@ export class Clock {
     console.log(now.toLocaleTimeString());
   }
   start() {
+    this.#render()
     setInterval(() => this.#render(), 1000);
   }
 }

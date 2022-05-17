@@ -9,7 +9,8 @@ console.log(
 // vers une liste de clé/valeur x: 1, y: 2
 const coords = { x: 1, y: 2 };
 
-const cloneCoords = { ...coords };
+const coords2 = coords; // 2 références coords et coords2 qui pointent sur même objet
+const cloneCoords = { ...coords }; // cloneCoords est un nouvel objet
 const coordsImmuable = { ...coords, z: 3 };
 
 // REST Objet
@@ -40,4 +41,5 @@ for (const nb of nbs) {
 
 
 
+// ES2021 Numeric Separator
 const oneBillion = 1_000_000_000;
