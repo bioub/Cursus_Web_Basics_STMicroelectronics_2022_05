@@ -19,4 +19,4 @@ Au click d'un bouton `-`, supprimer la balise `<div class="todo-row">` parent.
 # Exercice 3
 
 Ajouter une checkbox dans le formulaire HTML.
-Au clic de celle-ci, cocher ou découcher toutes les `<input type="checkbox" class="todo-completed">` (propriété `checked`)
+Au clic de celle-ci, cocher ou décocher toutes les `<input type="checkbox" class="todo-completed">` (propriété `checked`)
