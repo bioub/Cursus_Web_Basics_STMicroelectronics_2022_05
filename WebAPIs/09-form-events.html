@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form>
+      <div>Name : <input type="text" name="name" /></div>
+      <div>Email : <input type="email" name="email" /></div>
+      <div>
+        <button type="submit">Submit</button>
+        <button type="reset">Reset</button>
+      </div>
+    </form>
+    <script>
+      const formEventTypes = [
+        'beforeinput',
+        'input',
+        'change',
+        'focus',
+        'focusin',
+        'blur',
+        'focusout',
+      ];
+
+      // const inputEls = document.querySelectorAll('input');
+
+      // for (const inputEl of inputEls) {
+      //   for (const formEventType of formEventTypes) {
+      //     inputEl.addEventListener(formEventType, (event) => {
+      //       console.log(event.type, event.timeStamp);
+      //     });
+      //   }
+      // }
+
+      const formEl = document.querySelector('form');
+
+      for (const formEventType of formEventTypes) {
+        formEl.addEventListener(formEventType, (event) => {
+          console.log(event.type, event.timeStamp);
+        });
+      }
+    </script>
+  </body>
+</html>

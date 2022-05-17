@@ -20,19 +20,29 @@ export function createTodoRow(todo) {
   checkboxEl.className = 'todo-completed';
   checkboxEl.checked = todo.completed;
 
-  const spanEl = document.createElement('span');
-  spanEl.className = 'todo-title';
-  spanEl.innerText = todo.title;
+  const spanEl = createTodoSpan(todo.title);
 
   const btnEl = document.createElement('button');
   btnEl.className = 'todo-delete';
   btnEl.innerText = '-';
 
-  btnEl.addEventListener('click', () => {
-    divEl.remove();
-  });
-
   divEl.append(checkboxEl, spanEl, btnEl);
 
   return divEl;
+}
+
+
+export function createTodoSpan(title) {
+  const spanEl = document.createElement('span');
+  spanEl.className = 'todo-title';
+  spanEl.innerText = title;
+  return spanEl;
+}
+
+export function createTodoInput(title) {
+  const inputEl = document.createElement('input');
+  inputEl.type = 'text';
+  inputEl.className = 'todo-title-edit';
+  inputEl.value = title;
+  return inputEl;
 }
