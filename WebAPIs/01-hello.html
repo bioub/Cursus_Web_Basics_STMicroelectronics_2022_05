@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>DOM</title>
+  <script>
+    function helloworld() {
+      var inputElt = document.getElementsByTagName('input')[0];
+      var spanElt = document.getElementsByTagName('span')[0];
+      var text = document.createTextNode(inputElt.value);
+      if (!spanElt.childNodes.length) {
+        spanElt.appendChild(text);
+      } else {
+        spanElt.replaceChild(text, spanElt.firstChild);
+      }
+    }
+  </script>
+</head>
+<body>
+  <div>Name : <input id="input" onkeyup="helloworld()"></div>
+  <p>Hello <span id="output"></span> !</div>
+</body>
+</html>

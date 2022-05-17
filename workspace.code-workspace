@@ -11,9 +11,12 @@
 		},
 		{
 			"path": "Modules"
+		},
+		{
+			"path": "WebAPIs"
 		}
 	],
 	"settings": {
-		"liveServer.settings.multiRootWorkspaceName": "Modules"
+		"liveServer.settings.multiRootWorkspaceName": "WebAPIs"
 	}
 }
