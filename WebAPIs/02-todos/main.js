@@ -9,6 +9,9 @@ const inputEl = document.querySelector('.todos-input');
 /** @type {HTMLDivElement} */
 const containerEl = document.querySelector('.todos-container');
 
+/** @type {HTMLInputElement} */
+const toggleEl = document.querySelector('.todos-toggle');
+
 formEl.addEventListener('submit', (event) => {
   event.preventDefault();
 
@@ -19,4 +22,13 @@ formEl.addEventListener('submit', (event) => {
   });
 
   containerEl.prepend(divEl);
+});
+
+toggleEl.addEventListener('click', () => {
+  /** @type {NodeListOf<HTMLInputElement>} */
+  const checkboxEls = containerEl.querySelectorAll('.todo-completed');
+
+  for (const checkboxEl of checkboxEls) {
+    checkboxEl.checked = toggleEl.checked;
+  }
 });

@@ -15,11 +15,24 @@ export function createTodoRow(todo) {
   divEl.className = 'todo-row';
   divEl.dataset.todoId = todo.id;
 
+  const checkboxEl = document.createElement('input');
+  checkboxEl.type = 'checkbox';
+  checkboxEl.className = 'todo-completed';
+  checkboxEl.checked = todo.completed;
+
   const spanEl = document.createElement('span');
   spanEl.className = 'todo-title';
   spanEl.innerText = todo.title;
 
-  divEl.append(spanEl);
+  const btnEl = document.createElement('button');
+  btnEl.className = 'todo-delete';
+  btnEl.innerText = '-';
+
+  btnEl.addEventListener('click', () => {
+    divEl.remove();
+  });
+
+  divEl.append(checkboxEl, spanEl, btnEl);
 
   return divEl;
 }
