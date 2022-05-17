@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        height: 100vh;
+        display: flex;
+      }
+      .externe {
+        display: flex;
+        margin: auto;
+        width: 100px;
+        height: 100px;
+        background-color: yellow;
+        border-radius: 50%;
+      }
+
+      .interne {
+        text-align: center;
+        appearance: none; /* ne doit plus être un champ */
+        margin: auto;
+        width: 50px;
+        height: 50px;
+        background-color: red;
+        border-radius: 50%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="externe">
+      <input type="text" class="interne" />
+    </div>
+    <script>
+      const externeEl = document.querySelector('.externe');
+      const interneEl = document.querySelector('.interne');
+
+      // document.body.addEventListener('click', () => {
+      //   console.log('click body');
+      // }, true);
+
+      document.body.addEventListener('click', () => {
+        console.log('click body');
+      }, { capture: true, once: true });
+
+      externeEl.addEventListener('click', (event) => {
+        /** @type {HTMLElement} */
+        const target = event.target;
+        console.log('click externe');
+        console.log('currentTarget', event.currentTarget.className);
+        console.log('target', event.target.className);
+
+        if (target.classList.contains('interne')) {
+          console.log('vous avez cliqué sur le rouge');
+        }
+      });
+
+      // interneEl.addEventListener('click', (event) => {
+      //   console.log('click interne');
+      // });
+    </script>
+  </body>
+</html>

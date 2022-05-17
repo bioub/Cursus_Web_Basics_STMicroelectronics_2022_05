@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        height: 100vh;
+        display: flex;
+      }
+      .externe {
+        display: flex;
+        margin: auto;
+        width: 100px;
+        height: 100px;
+        background-color: yellow;
+        border-radius: 50%;
+      }
+
+      .interne {
+        margin: auto;
+        width: 50px;
+        height: 50px;
+        background-color: red;
+        border-radius: 50%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="externe">
+      <div class="interne"></div>
+    </div>
+    <script>
+      const mouseEventTypes = [
+        'auxclick',
+        'click',
+        'contextmenu',
+        'dblclick',
+        'mousedown',
+        'mouseenter',
+        'mouseleave',
+        'mousemove',
+        'mouseout',
+        'mouseover',
+        'mouseup',
+      ];
+
+      const externeEl = document.querySelector('.externe');
+
+      for (const mouseEventType of mouseEventTypes) {
+        externeEl.addEventListener(mouseEventType, (event) => {
+          console.log(event.type, event.timeStamp);
+        });
+      }
+    </script>
+  </body>
+</html>
