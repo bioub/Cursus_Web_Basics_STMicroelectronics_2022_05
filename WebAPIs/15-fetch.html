@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link ref="stylesheet" href="15-fetch.css">
+  </head>
+  <body>
+    <form class="adresse-form">
+      <input class="adresse" />
+      <button>Get coords</button>
+    </form>
+    <script>
+      /** @type {HTMLFormElement} */
+      const formEl = document.querySelector('.adresse-form');
+
+      /** @type {HTMLInputElement} */
+      const adresseEl = document.querySelector('.adresse');
+
+      formEl.addEventListener('submit', (event) => {
+        event.preventDefault();
+
+        const recherche = adresseEl.value;
+
+        const url =
+          'https://api-adresse.data.gouv.fr/search/?q=' + encodeURI(recherche);
+
+        fetch(url, { method: 'GET' })
+          .then((res) => res.json())
+          .then((data) => {
+            const resultEl = document.createElement('div');
+            resultEl.innerText = `Recherche ${recherche} : ${data.features[0].geometry.coordinates}`;
+
+            document.body.prepend(resultEl);
+          });
+      });
+    </script>
+  </body>
+</html>

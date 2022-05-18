@@ -73,3 +73,20 @@ window.addEventListener('click', (event) => {
     inputEl.replaceWith(spanEl);
   }
 });
+
+
+// Exercice Reseau et Storage
+
+// Exercice 1 : Réseau
+// Envoyer avec l'API fetch ou XMLHttpRequest une requête GET
+// vers https://jsonplaceholder.typicode.com/todos
+// parser le JSON reçu en réponse
+// pour chaque élément du tableau appeler la méthode createTodoRow
+// et ajouter les lignes créé au container
+
+// Exercice 2 : Storage
+// Ecouter la saisi dans le champs .todos-input avec l'événement input
+// stocker la valeur saisie dans le localStorage à la clé de votre choix
+// (exemple slide 51)
+// Au chargement de la page remplir le champs avec le contenu du storage
+
