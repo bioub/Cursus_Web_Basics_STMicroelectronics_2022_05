@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .box {
+      width: 100px;
+      height: 100px;
+      transition: all 1s linear;
+    }
+
+    .pink {
+      background-color: lightpink;
+    }
+
+    .blue {
+      background-color: lightblue;
+      transform: translateY(100%);
+    }
+
+    .green {
+      background-color: lightgreen;
+      transform: rotate(90deg);
+    }
+  </style>
+</head>
+<body>
+  <div class="box pink">
+
+  </div>
+  <script>
+    const states = ['pink', 'blue', 'green'];
+    let currentState = 'pink';
+
+    const boxEl = document.querySelector('.box');
+    boxEl.addEventListener('click', () => {
+      const nextState = states[(states.indexOf(currentState) + 1) % states.length];
+      boxEl.classList.remove(currentState);
+      boxEl.classList.add(nextState);
+      currentState = nextState;
+    });
+  </script>
+</body>
+</html>

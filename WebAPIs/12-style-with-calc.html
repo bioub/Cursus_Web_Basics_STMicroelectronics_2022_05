@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .box {
+      width: 100px;
+      height: 100px;
+      transition: all 1s linear;
+      border: 1px solid black;
+    }
+  </style>
+</head>
+<body>
+  <div class="box">
+
+  </div>
+  <script>
+    function getRandomInt(min, max) {
+      min = Math.ceil(min);
+      max = Math.floor(max);
+      return Math.floor(Math.random() * (max - min) + min); //The maximum is exclusive and the minimum is inclusive
+    }
+
+    /** @type {HTMLDivElement} */
+    const boxEl = document.querySelector('.box');
+
+    boxEl.addEventListener('click', () => {
+      const red = getRandomInt(0, 256);
+      const green = getRandomInt(0, 256);
+      const blue = getRandomInt(0, 256);
+
+      const color = `rgb(${red}, ${green}, ${blue})`;
+
+      boxEl.style.backgroundColor = color;
+    });
+  </script>
+</body>
+</html>

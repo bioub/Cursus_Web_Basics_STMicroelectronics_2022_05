@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* Reset CSS */
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+    }
+
+    /* Elements */
+    h1, h2, h3, h4 {
+      margin: 0.5em 0;
+    }
+
+    /* Components */
+    #inscription {
+      width: 400px;
+      padding: 5px;
+      margin: 0 auto;
+      background-color: lightgray;
+    }
+
+    #inscription .form-row:first-child h4 {
+      margin-top: 0;
+    }
+
+    #inscription a {
+      text-decoration: none;
+    }
+
+    #inscription [class|="input"] {
+      width: 100%;
+    }
+
+    #inscription .input-firstname, #inscription .input-lastname {
+      width: 49%;
+    }
+
+    #inscription .input-jour, #inscription .input-mois, #inscription .input-annee {
+      width: 32%;
+    }
+
+
+    #inscription .form-input-container-username::after {
+      content: '@gmail.com';
+      position: relative;
+      top: -20px;
+      left: 300px;
+    }
+  </style>
+</head>
+<body>
+  <form id="inscription">
+    <div class="form-row">
+      <h4>Nom</h4>
+      <div>
+        <input type="text" class="input-firstname" name="firstname" placeholder="Prénom">
+        <input type="text" class="input-lastname" name="lastname" placeholder="Nom">
+      </div>
+    </div>
+    <div class="form-row">
+      <h4>Choisissez votre nom d'utilisateur</h4>
+      <div class="form-input-container-username">
+        <input type="text" class="input-username" name="username">
+      </div>
+      <div>
+        <a href="#">Je préfère utiliser mon adresse e-mail actuelle</a>
+      </div>
+    </div>
+    <div class="form-row">
+      <h4>Créez un mot de passe</h4>
+      <div>
+        <input type="password" class="input-password" name="password">
+      </div>
+    </div>
+    <div class="form-row">
+      <h4>Confirmez votre mot de passe</h4>
+      <div>
+        <input type="password" class="input-password-confirmation" name="password-confirmation">
+      </div>
+    </div>
+    <div class="form-row">
+      <h4>Date de naissance</h4>
+      <div>
+        <input type="number" class="input-jour" placeholder="Jour">
+        <select name="mois" class="input-mois">
+          <option value="01">Janvier</option>
+          <option value="02">Février</option>
+        </select>
+        <input type="number" class="input-annee" placeholder="Année">
+      </div>
+    </div>
+    <div class="form-row">
+      <h4>Sexe</h4>
+      <div>
+        <select name="sexe" class="input-sexe">
+          <option value="h">Homme</option>
+          <option value="f">Femme</option>
+        </select>
+      </div>
+    </div>
+  </form>
+  <script>
+    /*
+    Exercice Inscription
+
+    Voici les règles de validation de ce formulaire :
+    - firstname, lastname et username sont obligatoires
+    - password et password-confirmation doivent être identique
+    - jour doit être compris entre 1 et 31
+    - annee doit être compris entre 1900 et 2022
+
+    Ecouter l'événement submit du formulaire :
+    - si un des champs n'est pas valide appeler event.preventDefault()
+    - sinon laisser le navigateur faire (la page doit recharger)
+
+    Si un champ est en erreur :
+    Créer un message d'erreur qui sera ajouté en dernier enfant de <div class="form-row">
+    Ajouter la classe has-error à la balise <div class="form-row">
+
+    En CSS mettre le texte du h4 en rouge s'il est présent dans une balise avec la classe has-error
+    */
+  </script>
+</body>
+</html>

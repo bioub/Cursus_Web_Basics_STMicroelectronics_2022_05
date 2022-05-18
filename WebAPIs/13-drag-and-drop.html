@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .box {
+      width: 100px;
+      height: 100px;
+      transition: all 1s linear;
+      border: 1px solid black;
+      background-color: lightblue;
+      cursor: grab;
+    }
+
+    .container {
+      width: 100px;
+      height: 1000px;
+      padding: 5px;
+      border: 1px solid black;
+    }
+  </style>
+</head>
+<body>
+  <div class="box" draggable="true">
+
+  </div>
+
+  <div class="container">
+    <strong>Move Drop Zone</strong>
+  </div>
+  <script>
+    // const dragEventTypes = [
+    //     'drag',
+    //     'dragend',
+    //     'dragstart',
+    //     'dragenter',
+    //     'dragleave',
+    //     'dragover',
+    //     'drop',
+    //   ];
+
+      /** @type {HTMLDivElement} */
+      const boxEl = document.querySelector('.box');
+      /** @type {HTMLDivElement} */
+      const container = document.querySelector('.container');
+
+      boxEl.addEventListener('dragstart', (ev) => {
+        console.log('dragstart');
+        ev.dataTransfer.setData("text", ev.target.className);
+        // ev.effectAllowed = "copyMove";
+        // ev.preventDefault();
+      });
+
+      boxEl.addEventListener('dragend', (ev) => {
+        console.log('dragend');
+        ev.dataTransfer.clearData();
+        // ev.preventDefault();
+      });
+
+      // container.addEventListener('dragenter', (ev) => {
+      //   console.log('dragenter');
+      //   ev.preventDefault();
+      // });
+
+      container.addEventListener('dragover', (ev) => {
+        // console.log('dragover');
+        ev.preventDefault();
+      });
+
+      container.addEventListener('drop', (ev) => {
+        console.log('drop');
+        ev.preventDefault();
+        const className = ev.dataTransfer.getData("text");
+        const boxEl = document.querySelector('.' + className);
+        container.prepend(boxEl);
+      });
+
+    //   for (const dragEventType of dragEventTypes) {
+    //     boxEl.addEventListener(dragEventType, (event) => {
+    //       console.log(event.type, event.timeStamp);
+    //     });
+    //   }
+
+
+  </script>
+</body>
+</html>
