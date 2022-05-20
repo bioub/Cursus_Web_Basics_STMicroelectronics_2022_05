@@ -1,0 +1,41 @@
+.phone-image {
+  width: 450px;
+  height: 450px;
+  float: left;
+}
+
+@media (max-width: 768px) {
+  .phone-image {
+    display: none;
+  }
+}
+
+.phone-thumbs {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.phone-thumbs img {
+  width: 100%;
+  height: 100%;
+}
+
+.phone-thumbs li {
+  width: 100px;
+  height: 100px;
+  background-color: white;
+  border: 1px solid black;
+  cursor: pointer;
+  padding: 1em;
+  margin: 1em;
+}
+
+@media (max-width: 768px) {
+  .phone-thumbs li {
+    width: 100%;
+    height: auto;
+    margin: 0 0 1em 0;
+  }
+}
