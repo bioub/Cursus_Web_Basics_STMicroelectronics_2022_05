@@ -71,7 +71,7 @@
 //     setTimeout(() => {
 //       // dans une fonction fléchées
 //       // les pseudo-variables (this, arguments...)
-//       // ne sont pas créé
+//       // ne sont pas créées
 //       console.log(this);
 //       console.log('Hello ' + this.name);
 //     }, 1000);

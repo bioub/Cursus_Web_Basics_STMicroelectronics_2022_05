@@ -19,7 +19,25 @@
       /** @type {HTMLInputElement} */
       const adresseEl = document.querySelector('.adresse');
 
-      formEl.addEventListener('submit', (event) => {
+      // formEl.addEventListener('submit', (event) => {
+      //   event.preventDefault();
+
+      //   const recherche = adresseEl.value;
+
+      //   const url =
+      //     'https://api-adresse.data.gouv.fr/search/?q=' + encodeURI(recherche);
+
+      //   fetch(url, { method: 'GET' })
+      //     .then((res) => res.json())
+      //     .then((data) => {
+      //       const resultEl = document.createElement('div');
+      //       resultEl.innerText = `Recherche ${recherche} : ${data.features[0].geometry.coordinates}`;
+
+      //       document.body.prepend(resultEl);
+      //     });
+      // });
+
+      formEl.addEventListener('submit', async (event) => {
         event.preventDefault();
 
         const recherche = adresseEl.value;
@@ -27,14 +45,12 @@
         const url =
           'https://api-adresse.data.gouv.fr/search/?q=' + encodeURI(recherche);
 
-        fetch(url, { method: 'GET' })
-          .then((res) => res.json())
-          .then((data) => {
-            const resultEl = document.createElement('div');
-            resultEl.innerText = `Recherche ${recherche} : ${data.features[0].geometry.coordinates}`;
+        const res = await fetch(url, { method: 'GET' })
+        const data = await res.json();
+        const resultEl = document.createElement('div');
+        resultEl.innerText = `Recherche ${recherche} : ${data.features[0].geometry.coordinates}`;
 
-            document.body.prepend(resultEl);
-          });
+        document.body.prepend(resultEl);
       });
     </script>
   </body>

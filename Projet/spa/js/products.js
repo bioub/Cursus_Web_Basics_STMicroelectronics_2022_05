@@ -46,6 +46,11 @@ function products(mainEl) {
   });
 }
 
+// Dans un test
+// function fetchProducts() 
+//   return Promise.resolve([{id: 1}]);
+// }
+
 function fetchProducts() {
   return fetch(
     'https://6a59157b-430d-4969-b802-b9c12470dafb-bluemix.cloudantnosqldb.appdomain.cloud/phones/_all_docs?include_docs=true',

@@ -1,5 +1,3 @@
-'use strict';
-
 import readline from 'readline';
 import { getRandomInt } from './random.mjs';
 
